@@ -1,26 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Header from "./components/Header";
+import Sidebar from "./components/Sidebar";
+import AppRouter from "./router/AppRouter";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <Header/>
+    <div className="row">
+      <div className="col-xl-1 col-lg-2 col-sm-2 col-12" style={{backgroundColor: '#e3e3e3'}}>
+        <Sidebar/>
+      </div>
+      <div className="col-xl-11 col-lg-10 col-sm-10 col-12">
+        <AppRouter/>
+      </div>
     </div>
-  );
+    </>
+  )
 }
 
 export default App;
